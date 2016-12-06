@@ -17,7 +17,7 @@ EXPOSE 8080
 
 VOLUME /host_hostname
 
-ENV app_version=1.0
+ENV app_version=1.1
 
 # Entry point
 CMD ["/usr/bin/python", "/webapp/restserver.py"]
