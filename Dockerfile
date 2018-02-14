@@ -1,5 +1,4 @@
 FROM alpine:latest
-MAINTAINER Stefan Eggenschwiler <s@xio.cc>
 
 # install Python with web.py
 RUN	apk update && \
