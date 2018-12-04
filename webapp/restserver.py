@@ -48,15 +48,20 @@ class webapp_root:
 
 # get hostname and container name
 container = file_head('/etc/hostname')
-host = file_head('/host_hostname')
 if container == '<unknown>':
     container = socket.gethostname()
 
-# get app version from environment variable
+# get app version and host's hostname from environment variable
 if 'app_version' in os.environ:
     app_version = os.environ['app_version']
 else:
     app_version = '<unknown>'
+
+if 'host' in os.environ:
+    host = os.environ['host']
+else:
+    host = '<unknown>'
+
 
 def main():
     app = web.application(urls, globals())

@@ -14,8 +14,6 @@ ADD webapp /webapp
 
 EXPOSE 8080
 
-VOLUME /host_hostname
-
 ENV app_version=1.1
 
 # Entry point
